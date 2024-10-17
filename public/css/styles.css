@@ -1,0 +1,928 @@
+/* Base Styles */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Center the paragraph and reduce its width */
+.container p {
+    text-align: center;
+    max-width: 600px; /* Adjust this value to your desired width */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+
+/* Main Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1124px;
+    padding: 0 40px;
+    margin: 0 auto;
+    color: #ffffff;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo Styling */
+.logo {
+    font: 500 32px/1 'Outfit', sans-serif;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 40px;
+    letter-spacing: -0.32px;
+}
+
+.logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 40px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #fff;
+    font: 400 16px/1.3 'Roboto', sans-serif;
+}
+
+.nav-item:hover {
+    color: #fff;
+}
+
+/* Call-to-Action Button Styling */
+.cta-button {
+    border-radius: 100px;
+    background: linear-gradient(180deg, #ae0100, #fe0000);
+    font: 600 16px/1.3 'Outfit', sans-serif;
+    padding: 10px 24px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(180deg, #fe0000, #ae0100);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden; /* Ensure the background doesn't overflow */
+}
+
+/* Fixed Background specific to Hero Section */
+.fixed-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Confine the background to the hero section */
+    background: url('../images/Group42.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Fixes the background image */
+    z-index: -1; /* Behind the header and hero */
+    opacity: 0.9;
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.hero-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.hero-button,
+.email-button {
+    border-radius: 100px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button {
+    background: linear-gradient(180deg, #ae0100, #fe0000);
+    color: #fff;
+    border: none;
+}
+
+.email-button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.hero-button:hover {
+    background: linear-gradient(180deg, #fe0000, #ae0100);
+}
+
+.email-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Services Section */
+.services {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.what-we-offer {
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Services Container */
+.services-container {
+    width: 100%;
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Service Item */
+.service-item {
+    margin-bottom: 20px;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Service Button */
+.service-button {
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(90deg, #9b0000, #fe0000);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+/* Service Description (Dropdown) */
+.service-description {
+    display: none;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+
+
+/* Why Us Section */
+.why-us-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 20px; /* Reduced gap for mobile */
+    padding: 50px 20px; /* Add padding for mobile */
+}
+
+/* Other Agencies Styles */
+.other-agencies-container {
+    flex: 1 1 300px; /* Allow the container to grow and shrink */
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #9b0000, #fe0000);
+    color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+/* Agency Title Styling */
+.agency-title {
+    text-align: center;
+    font-size: 28px; /* Slightly smaller for mobile */
+    margin-bottom: 15px;
+    font-weight: medium;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* List Styling */
+.other-agencies-font {
+    list-style: disc inside;
+    padding: 0;
+    font-size: 18px; /* Slightly smaller for mobile */
+}
+
+.other-agencies-font li {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Global container spacing */
+.container {
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .agency-title {
+        font-size: 24px; /* Adjust title size for smaller screens */
+    }
+
+    .other-agencies-font {
+        font-size: 16px; /* Adjust list size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .why-us-section {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .other-agencies-container {
+        padding: 15px; /* Adjust padding for containers */
+    }
+
+    .agency-title {
+        font-size: 20px; /* Adjust title size for extra small screens */
+    }
+
+    .other-agencies-font {
+        font-size: 14px; /* Adjust list size for extra small screens */
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 991px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .services-container {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+/* Our Team */
+
+/* Wrapper for the team image and text */
+.team-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    height: 100vh; /* Full viewport height */
+    gap: 50px; /* Space between image and text */
+    padding: 20px;
+    margin-top: -70px;
+
+}
+
+/* Styling for the image container */
+.team-image {
+    width: 350px; /* Increased width for a more rectangular shape */
+    height: 500px; /* Increased height for a more rectangular shape */
+    border-radius: 20px; /* Curved corners for the image */
+    overflow: hidden; /* Ensure corners stay rounded */
+}
+
+.team-image img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the container, maintaining aspect ratio */
+    display: block; /* Remove extra space below the image */
+    border-radius: 20px; /* Apply curved corners to the image */
+}
+
+/* Styling for the text container */
+.team-text {
+    width: 350px; /* Increased width to match the image */
+    height: 500px; /* Increased height to match the image */
+    padding: 20px;
+    background: linear-gradient(90deg, #9b0000, #fe0000); /* Gradient background */
+    color: #fff; /* White text color */
+    border-radius: 20px; /* Curved corners for the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+}
+
+/* Title styling */
+.team-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Outfit, sans-serif; /* Apply the specified font */
+}
+
+/* Description text styling */
+.team-description {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Roboto, sans-serif; /* Apply the specified font */
+}
+
+
+/* TESTIMONIALS*/
+
+/* Ensures the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Title styling */
+.testimonials-title {
+    text-align: center;
+    margin: 20px 0; /* Space above and below the title */
+    font-size: 24px;
+    font-family: Outfit, sans-serif;
+}
+
+/* Wrapper for the testimonials */
+.testimonials-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space out the testimonial containers */
+    gap: 10px; /* Reduce space between containers */
+    padding: 0; /* Reset padding to avoid extra space */
+    margin: 40px auto 20px; /* Add margin to move the containers down; adjust as needed */
+    max-width: 1000px; /* Set a max-width to keep it centered and prevent stretching */
+}
+
+/* Styling for each testimonial container */
+.testimonial {
+    position: relative; /* To position the image inside */
+    width: 300px; /* Fixed width for the testimonial containers */
+    padding: 70px 20px 20px; /* Space for the image above; adjust if needed */
+    background: linear-gradient(90deg, #9b0000, #fe0000); /* Gradient background */
+    border-radius: 15px; /* Curved corners */
+    color: #fff; /* White text color */
+    margin: 0; /* Ensure no extra margin is causing space */
+}
+
+/* Styling for the testimonial image */
+.testimonial-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    top: -50px; /* Position above the container */
+    width: 100px; /* Diameter of the circular frame */
+    height: 100px; /* Diameter of the circular frame */
+    border-radius: 50%; /* Circular frame */
+    overflow: hidden; /* Ensure circular shape */
+    border: 4px solid #fff; /* Optional: add border to make the image stand out */
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Content section for the testimonial */
+.testimonial-content {
+    text-align: center; /* Center the text */
+}
+
+/* Text styling */
+.testimonial-text {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Outfit, sans-serif;
+}
+
+/* Ensure body and html take up full height and remove default margins */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Container styling */
+.logo-container {
+    width: 75%;
+    overflow: hidden; /* Hide overflow from moving images */
+    background: #950000; /* Optional: background color for contrast */
+    border-radius: 20px; /* Add curved corners */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Optional: Add padding for content inside the container */
+    margin-top: 10px; /* Remove extra space between titles */
+    margin-bottom: 10px; /* Moved title closer to containers */
+    position: relative; /* Ensure positioning context for the scrolling effect */
+}
+
+/* Wrapper for images */
+.logo-wrapper {
+    display: flex;
+    align-items: center; /* Center items vertically if heights are different */
+    width: 200%; /* Twice the width to accommodate seamless scrolling */
+    animation: scroll-left 30s linear infinite; /* Adjust duration for a smoother effect */
+}
+
+/* Style for images */
+.logo-wrapper img {
+    height: 100px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Start at the beginning */
+    }
+    100% {
+        transform: translateX(-50%); /* Move to the left side, creating a seamless loop */
+    }
+}
+
+
+
+
+/* RESULTS IMAGES */
+/* Ensure the body takes full height and remove default margins */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+
+
+
+/* Container for images */
+.image-container {
+    display: flex;                    /* Enable flexbox layout */
+    justify-content: center;          /* Center images horizontally */
+    align-items: center;              /* Center images vertically if container height is defined */
+    gap: 20px;                        /* Space between images */
+    padding: 20px;                   /* Optional: padding around the container */
+    flex-wrap: wrap;                  /* Allow images to wrap to the next line on smaller screens */
+}
+
+/* Wrapper for individual images */
+.image-wrapper {
+    width: 350px;                     /* Fixed width for images on desktop */
+    height: auto;                     /* Height will adjust based on the image's aspect ratio */
+    max-height: 350px;                /* Set a maximum height to maintain visual consistency */
+    overflow: hidden;                 /* Hide overflow if the image is larger than the container */
+    border-radius: 10px;              /* Optional: rounded corners for the image container */
+}
+
+/* Style for images */
+.image-wrapper img {
+    width: 100%;                      /* Make image responsive */
+    height: auto;                     /* Maintain aspect ratio */
+    object-fit: contain;              /* Show the entire image within the container */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;        /* Stack images vertically */
+        align-items: center;           /* Center images in mobile view */
+    }
+
+    .image-wrapper {
+        width: 90%;                    /* Full width of the container on mobile */
+        max-height: 100%;             /* Adjust max height for mobile */
+        margin-bottom: 20px;           /* Space between stacked images */
+    }
+}
+
+
+
+
+
+
+/* Container for the FAQ buttons */
+.faq-container {
+    width: 100%;                     /* Make the container responsive */
+    max-width: 800px;                /* Set a maximum width */
+    margin: 0 auto;                  /* Center the container horizontally */
+    padding: 20px 0;                 /* Optional padding for top/bottom spacing */
+}
+
+/* FAQ title styling */
+.faq-title {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* FAQ item styling */
+.faq-item {
+    margin: 10px 0;                  /* Add space between FAQ items */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    overflow: hidden;                 /* Ensure content does not overflow */
+}
+
+/* FAQ button styling */
+.faq-button {
+    width: 100%;                     /* Make button span the full container width */
+    position: relative;
+    background: linear-gradient(90deg, #9b0000, #fe0000); /* Red gradient */
+    border: 1px solid #000;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;   /* Space between question and icon */
+    align-items: center;              /* Center text vertically */
+    padding: 0 20px;                 /* Padding inside the button */
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;                  /* Pointer cursor on hover */
+}
+
+/* FAQ question text styling */
+.faq-question {
+    font-size: 18px;                 /* Maintain question text size */
+    font-weight: 600;
+}
+
+/* FAQ icon styling */
+.faq-icon {
+    font-size: 24px;                 /* Maintain icon size */
+}
+
+/* FAQ answer styling */
+.faq-answer {
+    display: none;                   /* Hide answers by default */
+    padding: 20px;                  /* Padding inside the answer section */
+    background: #ffffff;            /* Grey background for the answer */
+    border-top: 1px solid #ddd;     /* Border to separate answer from question */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 20px;            /* Slightly smaller title on mobile */
+    }
+
+    .faq-button {
+        height: 50px;               /* Reduce button height for mobile */
+        padding: 0 15px;            /* Reduce padding */
+    }
+
+    .faq-question {
+        font-size: 16px;            /* Reduce question font size for mobile */
+    }
+
+    .faq-icon {
+        font-size: 20px;            /* Reduce icon size for mobile */
+    }
+
+    .faq-answer {
+        font-size: 14px;            /* Reduce answer font size for mobile */
+    }
+}
+
+
+
+
+
+
+
+/* Gradient container */
+/* Ensure body and html take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font for the body */
+}
+
+/* Container styling */
+.gradient-container {
+    background: linear-gradient(90deg, #1d5b1d, #920000); /* Gradient background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px; /* Curved corners */
+    max-width: 800px; /* Set a max width */
+    max-height: 400px;
+    margin: 50px auto; /* Center the container and add space above/below */
+    color: #fff; /* White text color */
+}
+
+/* Small text styling */
+.small-text {
+    font-family: Roboto, sans-serif;
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0;
+}
+
+/* Large text styling */
+.large-text {
+    font-family: Outfit, sans-serif;
+    font-size: 40px; /* Adjust size as needed */
+    margin: 20px 0; /* Space between text and button */
+}
+
+/* Button styling */
+.get-started-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(90deg, #9b0000, #fe0000); /* Gradient background for button */
+    border: none;
+    border-radius: 30px; /* Curved corners for button */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+.get-started-button:hover {
+    background: linear-gradient(90deg, #fe0000, #9b0000); /* Reverse gradient on hover */
+}
+
+/* Form Container */
+#contact .container {
+    max-width: 900px; /* Adjust form width */
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Form Styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 50% less gap between form groups */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 22px; /* Increased padding for 20% larger containers */
+    font-size: 20px; /* Larger font size */
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 10px; /* Reduced gap between fields in the same row (50% less space) */
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-control::placeholder {
+    text-align: center;
+}
+
+/* Submit Button Styling */
+.btn-primary {
+    background: linear-gradient(180deg, #ae0100, #fe0000); /* Red gradient */
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 8px; /* Reduced padding even more */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    width: auto; /* Ensures the button wraps around the text */
+    min-width: 0; /* Remove any minimum width constraints */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(180deg, #fe0000, #ae0100);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group input {
+        font-size: 18px;
+        padding: 18px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px 20px; /* Reduced padding for mobile */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 40px 0;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Links: Position under the 3rd column */
+.footer-social {
+    display: flex;
+    justify-content: flex-start; /* Align to the left under the 3rd column */
+    margin-top: 20px;
+}
+
+.footer-social a img {
+    width: 48px; /* Larger size */
+    height: 48px;
+    margin-right: 15px;
+}
+
+.newsletter-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 4px 15px; /* Reduced height */
+    border-radius: 50px; /* More rounded */
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.newsletter-input {
+    border: none;
+    padding: 8px;
+    flex: 1;
+    outline: none;
+    border-radius: 50px 0 0 50px;
+}
+
+.newsletter-submit {
+    background: linear-gradient(90deg, #ae0100, #fe0000); /* Gradient */
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 50px; /* Fully rounded */
+    cursor: pointer;
+    margin-left: -250px; /* Shift more to the left */
+    position: relative;
+    right: -5px; /* Adjust to prevent cut-off */
+}
+
+.newsletter-submit:hover {
+    background: linear-gradient(90deg, #900100, #d00000); /* Darken gradient on hover */
+}
+
+.footer-legal {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.footer-legal-links {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.footer-legal-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-legal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    color: #aaa;
+}
+html {
+    scroll-behavior: smooth; /* for a smoother scroll when clicking on a link*/
+  }
