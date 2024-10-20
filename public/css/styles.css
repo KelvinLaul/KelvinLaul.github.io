@@ -144,17 +144,11 @@ body {
     color: #fff;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 90px;
-    height: 100vh;
-    z-index: 1;
-    overflow: hidden; /* Ensure the background doesn't overflow */
-}
+
+
+
+
+
 
 /* Fixed Background specific to Hero Section */
 .fixed-background {
@@ -171,21 +165,32 @@ body {
 }
 
 
-
-
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align content vertically */
+    padding: 20px;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden; /* Ensure the background doesn't overflow */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
 
 /* Hero Content */
 .hero-content {
-    max-width: 600px; /* Maintain max width for larger screens */
-    margin-right: 20px; /* Spacing on the right */
-    position: relative; /* Ensures child elements can be positioned correctly */
-    z-index: 1; /* Ensure content is above background */
+    max-width: 600px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Center text for better alignment */
 }
 
 /* Hero Title */
 .hero-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 90px; /* Adjust size for larger screens */
+    font-size: 90px;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -204,79 +209,75 @@ body {
 /* Hero Buttons */
 .hero-buttons {
     display: flex;
-    gap: 16px; /* Space between buttons */
-    margin-top: 20px; /* Space above buttons */
+    gap: 16px;
+    justify-content: center; /* Center buttons */
+    margin-top: 20px;
 }
 
 /* Button Styling */
 .hero-button,
 .email-button {
-    border-radius: 100px; /* Rounded corners */
-    padding: 10px 24px; /* Smaller padding for smaller text */
-    font-size: 16px; /* Reduced font size for buttons */
-    font-weight: 600; /* Bold text */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Transition effect */
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .hero-button {
-    background: linear-gradient(180deg, #ae0100, #fe0000); /* Gradient background */
-    color: #fff; /* White text */
-    border: none; /* No border */
+    background: linear-gradient(180deg, #ae0100, #fe0000);
+    color: #fff;
+    border: none;
 }
 
 .email-button {
-    background: transparent; /* Transparent background */
-    border: 1px solid #fff; /* White border */
-    color: #fff; /* White text */
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
-/* Button Hover Effects */
 .hero-button:hover {
-    background: linear-gradient(180deg, #fe0000, #ae0100); /* Hover gradient */
+    background: linear-gradient(180deg, #fe0000, #ae0100);
 }
 
 .email-button:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Hero Logo */
 .hero-logo {
-    position: relative; /* Allow positioning */
-    max-width: 250px; /* Adjust size of the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 10%; /* Space above the logo */
-    margin-right: 0; /* Remove right margin */
-    right: 10%; /* Adjust distance from the right for better centering */
+    position: relative;
+    max-width: 250px;
+    height: auto;
+    margin-left: 20px; /* Add space between logo and content */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 40px; /* Smaller title on mobile */
+        font-size: 40px;
     }
 
     .hero-description {
-        font-size: 16px; /* Adjust description size */
-        line-height: 20px; /* Adjust line height */
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .hero-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons */
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-button,
     .email-button {
-        width: 100%; /* Full width buttons on mobile */
-        margin: 10px 0; /* Space between buttons */
+        width: 100%;
+        margin: 10px 0;
     }
 
     .hero-logo {
-        right: 0; /* Center it under the buttons */
-        max-width: 80%; /* Limit size on smaller screens */
-        margin-top: 10px; /* Space between buttons and logo */
-        align-self: center; /* Center align logo */
+        max-width: 150px;
+        margin-top: 20px;
     }
 }
 
@@ -682,10 +683,12 @@ html, body {
 .image-container {
     display: flex;                    /* Enable flexbox layout */
     justify-content: center;          /* Center images horizontally */
-    align-items: center;              /* Center images vertically if container height is defined */
+    align-items: center;              /* Center images vertically */
     gap: 20px;                        /* Space between images */
-    padding: 20px;                    /* Optional: padding around the container */
-    flex-wrap: wrap;                  /* Allow images to wrap on desktop */
+    padding: 20px;                   /* Optional: padding around the container */
+    flex-wrap: wrap;                  /* Allow images to wrap to the next line on smaller screens */
+    max-width: 1200px;                /* Optional: limit max width for the container */
+    margin: 0 auto;                   /* Center container itself */
 }
 
 /* Wrapper for individual images */
@@ -695,6 +698,8 @@ html, body {
     max-height: 350px;                /* Set a maximum height to maintain visual consistency */
     overflow: hidden;                 /* Hide overflow if the image is larger than the container */
     border-radius: 10px;              /* Optional: rounded corners for the image container */
+    display: flex;                    /* Enable flexbox for inner centering */
+    justify-content: center;          /* Center the image within its wrapper */
 }
 
 /* Style for images */
@@ -707,18 +712,21 @@ html, body {
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .image-container {
-        flex-wrap: nowrap;               /* Prevent wrapping, keep images in one row */
-        justify-content: flex-start;     /* Align images to the start of the row */
-        overflow-x: auto;                /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-        gap: 20px;                       /* Space between images */
-        padding: 10px 0;                 /* Adjust padding for mobile view */
+        flex-direction: row;          /* Set to row for mobile */
+        overflow-x: auto;             /* Allow horizontal scrolling */
+        gap: 10px;                    /* Adjust gap between images */
     }
 
     .image-wrapper {
-        width: 250px;                    /* Adjust image width for mobile */
-        max-height: 250px;               /* Adjust max height for mobile */
-        flex-shrink: 0;                  /* Prevent images from shrinking */
+        flex: 0 0 auto;               /* Prevent the wrapper from growing or shrinking */
+        width: 200px;                 /* Set a smaller width for images on mobile */
+    }
+
+
+    /* Optional: Center the first image at the start */
+    .image-container::before {
+        content: '';
+        flex: 0 0 20px;                   /* Add space before the first image to push it inward */
     }
 
     /* Hide scrollbars for a cleaner look (optional) */
@@ -726,8 +734,8 @@ html, body {
         display: none;
     }
     .image-container {
-        -ms-overflow-style: none;        /* IE and Edge */
-        scrollbar-width: none;           /* Firefox */
+        -ms-overflow-style: none;         /* IE and Edge */
+        scrollbar-width: none;            /* Firefox */
     }
 }
 
