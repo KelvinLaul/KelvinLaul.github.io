@@ -47,6 +47,8 @@ body {
     text-decoration: none;
 }
 
+
+
 /* Navigation Links */
 .nav-links {
     display: flex;
@@ -64,6 +66,66 @@ body {
 .nav-item:hover {
     color: #fff;
 }
+
+
+.navbar {
+    background-color: transparent !important; /* Make navbar background transparent */
+}
+
+.navbar-nav {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Center aligns items vertically */
+}
+
+.navbar .navbar-brand {
+    font-size: 30px; /* Increase the font size for the brand text */
+    font-weight: bold; /* Optional: make the text bold */
+    color: #fff; /* Set brand color to white */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff; /* Set nav link color to white for better visibility */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    line-height: 1.5; /* Adjust line height */
+    font-size: 16px; /* Set font size for consistency */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff; /* Change hover color as desired */
+}
+
+.btn-primary {
+    padding: 10px 20px; /* Match padding with links */
+    font-size: 16px; /* Match font size with navbar links */
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Center the text */
+    height: 38px; /* Set height to match nav links */
+    line-height: 1; /* Ensure line height matches */
+}
+
+/* Optional: Adjust navbar when scrolled */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background when scrolled */
+    transition: background-color 0.3s;
+}
+
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-color: white; /* Change burger menu icon color to white */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Change icon color on hover */
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: slightly transparent on hover */
+}
+
+
+
+
 
 /* Call-to-Action Button Styling */
 .cta-button {
@@ -108,21 +170,29 @@ body {
     opacity: 0.9;
 }
 
+
+
+
+
 /* Hero Content */
 .hero-content {
-    max-width: 600px;
-    margin-right: 20px;
+    max-width: 600px; /* Maintain max width for larger screens */
+    margin-right: 20px; /* Spacing on the right */
+    position: relative; /* Ensures child elements can be positioned correctly */
+    z-index: 1; /* Ensure content is above background */
 }
 
+/* Hero Title */
 .hero-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 90px;
+    font-size: 90px; /* Adjust size for larger screens */
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
     color: #ffffff;
 }
 
+/* Hero Description */
 .hero-description {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -134,38 +204,84 @@ body {
 /* Hero Buttons */
 .hero-buttons {
     display: flex;
-    gap: 16px;
+    gap: 16px; /* Space between buttons */
+    margin-top: 20px; /* Space above buttons */
 }
 
+/* Button Styling */
 .hero-button,
 .email-button {
-    border-radius: 100px;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 100px; /* Rounded corners */
+    padding: 10px 24px; /* Smaller padding for smaller text */
+    font-size: 16px; /* Reduced font size for buttons */
+    font-weight: 600; /* Bold text */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Transition effect */
 }
 
 .hero-button {
-    background: linear-gradient(180deg, #ae0100, #fe0000);
-    color: #fff;
-    border: none;
+    background: linear-gradient(180deg, #ae0100, #fe0000); /* Gradient background */
+    color: #fff; /* White text */
+    border: none; /* No border */
 }
 
 .email-button {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    background: transparent; /* Transparent background */
+    border: 1px solid #fff; /* White border */
+    color: #fff; /* White text */
 }
 
+/* Button Hover Effects */
 .hero-button:hover {
-    background: linear-gradient(180deg, #fe0000, #ae0100);
+    background: linear-gradient(180deg, #fe0000, #ae0100); /* Hover gradient */
 }
 
 .email-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
 }
+
+/* Hero Logo */
+.hero-logo {
+    position: relative; /* Allow positioning */
+    max-width: 250px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10%; /* Space above the logo */
+    margin-right: 0; /* Remove right margin */
+    right: 10%; /* Adjust distance from the right for better centering */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 40px; /* Smaller title on mobile */
+    }
+
+    .hero-description {
+        font-size: 16px; /* Adjust description size */
+        line-height: 20px; /* Adjust line height */
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    .hero-button,
+    .email-button {
+        width: 100%; /* Full width buttons on mobile */
+        margin: 10px 0; /* Space between buttons */
+    }
+
+    .hero-logo {
+        right: 0; /* Center it under the buttons */
+        max-width: 80%; /* Limit size on smaller screens */
+        margin-top: 10px; /* Space between buttons and logo */
+        align-self: center; /* Center align logo */
+    }
+}
+
+
+
 
 
 /* Services Section */
@@ -382,6 +498,7 @@ body {
     justify-content: center; /* Center the text vertically */
 }
 
+
 /* Title styling */
 .team-title {
     font-size: 24px;
@@ -398,7 +515,9 @@ body {
 }
 
 
-/* TESTIMONIALS*/
+
+
+/* TESTIMONIALS */
 
 /* Ensures the body and html take up the full height */
 html, body {
@@ -416,19 +535,21 @@ html, body {
 
 /* Wrapper for the testimonials */
 .testimonials-wrapper {
-    display: flex;
-    justify-content: space-between; /* Space out the testimonial containers */
-    gap: 10px; /* Reduce space between containers */
-    padding: 0; /* Reset padding to avoid extra space */
-    margin: 40px auto 20px; /* Add margin to move the containers down; adjust as needed */
-    max-width: 1000px; /* Set a max-width to keep it centered and prevent stretching */
+    display: flex; /* Use flexbox for horizontal alignment */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Space between containers */
+    padding: 20px 0; /* Space above and below testimonials */
+    margin: 20px auto; /* Center the testimonials and add margin */
+    max-width: 90%; /* Allow full width for scrolling, adjust as needed */
+    justify-content: center; /* Center align the testimonials horizontally */
 }
 
 /* Styling for each testimonial container */
 .testimonial {
     position: relative; /* To position the image inside */
-    width: 300px; /* Fixed width for the testimonial containers */
-    padding: 70px 20px 20px; /* Space for the image above; adjust if needed */
+    width: 200px; /* Width of the testimonial containers */
+    height: 220px; /* Increased height for a square shape with padding */
+    padding: 80px 10px 10px; /* Adjusted padding for better space above */
     background: linear-gradient(90deg, #9b0000, #fe0000); /* Gradient background */
     border-radius: 15px; /* Curved corners */
     color: #fff; /* White text color */
@@ -440,9 +561,9 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Center the image horizontally */
-    top: -50px; /* Position above the container */
-    width: 100px; /* Diameter of the circular frame */
-    height: 100px; /* Diameter of the circular frame */
+    top: -10px; /* Adjusted position above the container */
+    width: 60px; /* Diameter of the circular frame */
+    height: 60px; /* Diameter of the circular frame */
     border-radius: 50%; /* Circular frame */
     overflow: hidden; /* Ensure circular shape */
     border: 4px solid #fff; /* Optional: add border to make the image stand out */
@@ -461,16 +582,34 @@ html, body {
 
 /* Text styling */
 .testimonial-text {
-    font-size: 16px;
+    font-size: 14px; /* Adjusted text size for smaller fit */
     font-family: Roboto, sans-serif;
     margin-bottom: 10px;
 }
 
 .testimonial-author {
-    font-size: 14px;
+    font-size: 12px; /* Adjusted font size for author */
     font-weight: bold;
     font-family: Outfit, sans-serif;
 }
+
+/* Optional styling for the scroll container */
+.testimonials-wrapper::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+.testimonials-wrapper::-webkit-scrollbar-thumb {
+    background: #aaa; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.testimonials-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Darker color on hover */
+}
+
+
+
+
 
 /* Ensure body and html take up full height and remove default margins */
 html, body {
@@ -481,14 +620,14 @@ html, body {
 
 /* Container styling */
 .logo-container {
-    width: 75%;
+    width: 90%; /* Increased width for better visibility on larger screens */
     overflow: hidden; /* Hide overflow from moving images */
     background: #950000; /* Optional: background color for contrast */
     border-radius: 20px; /* Add curved corners */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Optional: Add padding for content inside the container */
-    margin-top: 10px; /* Remove extra space between titles */
-    margin-bottom: 10px; /* Moved title closer to containers */
+    padding: 10px; /* Reduced padding for a more compact look */
+    margin-top: 10px; /* Keep some space above the container */
+    margin-bottom: 10px; /* Maintain space below */
     position: relative; /* Ensure positioning context for the scrolling effect */
 }
 
@@ -497,14 +636,15 @@ html, body {
     display: flex;
     align-items: center; /* Center items vertically if heights are different */
     width: 200%; /* Twice the width to accommodate seamless scrolling */
-    animation: scroll-left 30s linear infinite; /* Adjust duration for a smoother effect */
+    animation: scroll-left 15s linear infinite; /* Adjusted duration for faster scrolling */
 }
 
 /* Style for images */
 .logo-wrapper img {
-    height: 100px; /* Adjust height as needed */
+    height: 80px; /* Adjust height to be slightly smaller */
     width: auto; /* Maintain aspect ratio */
     flex-shrink: 0; /* Prevent images from shrinking */
+    margin: 0 15px; /* Add horizontal spacing between images */
 }
 
 /* Keyframes for the scrolling animation */
@@ -514,6 +654,17 @@ html, body {
     }
     100% {
         transform: translateX(-50%); /* Move to the left side, creating a seamless loop */
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 95%; /* Allow a bit more width on mobile */
+    }
+
+    .logo-wrapper img {
+        height: 60px; /* Further reduce height on mobile */
     }
 }
 
@@ -527,19 +678,14 @@ html, body {
     margin: 0;
 }
 
-
-
-
-
-
 /* Container for images */
 .image-container {
     display: flex;                    /* Enable flexbox layout */
     justify-content: center;          /* Center images horizontally */
     align-items: center;              /* Center images vertically if container height is defined */
     gap: 20px;                        /* Space between images */
-    padding: 20px;                   /* Optional: padding around the container */
-    flex-wrap: wrap;                  /* Allow images to wrap to the next line on smaller screens */
+    padding: 20px;                    /* Optional: padding around the container */
+    flex-wrap: wrap;                  /* Allow images to wrap on desktop */
 }
 
 /* Wrapper for individual images */
@@ -561,14 +707,27 @@ html, body {
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .image-container {
-        flex-direction: column;        /* Stack images vertically */
-        align-items: center;           /* Center images in mobile view */
+        flex-wrap: nowrap;               /* Prevent wrapping, keep images in one row */
+        justify-content: flex-start;     /* Align images to the start of the row */
+        overflow-x: auto;                /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+        gap: 20px;                       /* Space between images */
+        padding: 10px 0;                 /* Adjust padding for mobile view */
     }
 
     .image-wrapper {
-        width: 90%;                    /* Full width of the container on mobile */
-        max-height: 100%;             /* Adjust max height for mobile */
-        margin-bottom: 20px;           /* Space between stacked images */
+        width: 250px;                    /* Adjust image width for mobile */
+        max-height: 250px;               /* Adjust max height for mobile */
+        flex-shrink: 0;                  /* Prevent images from shrinking */
+    }
+
+    /* Hide scrollbars for a cleaner look (optional) */
+    .image-container::-webkit-scrollbar {
+        display: none;
+    }
+    .image-container {
+        -ms-overflow-style: none;        /* IE and Edge */
+        scrollbar-width: none;           /* Firefox */
     }
 }
 
@@ -798,14 +957,18 @@ html, body {
     }
 }
 
+
+
+
 /* Footer Styles */
 footer {
-    background-color: #000; /* Black background */
+    background-color: #000; /* Ensure black background */
     color: white;
     padding: 40px 0;
     position: relative;
 }
 
+/* Container Styling */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -815,18 +978,22 @@ footer {
     margin: 0 auto;
 }
 
+/* Column Styling */
 .footer-col {
     flex: 1;
     min-width: 200px;
     margin-bottom: 20px;
+    text-align: center; /* Center text in the column */
 }
 
+/* Footer Logo */
 .footer-logo {
     width: 150px;
     height: auto;
     margin-top: 10px;
 }
 
+/* Footer Links */
 .footer-links {
     list-style-type: none;
     padding: 0;
@@ -845,53 +1012,55 @@ footer {
     text-decoration: underline;
 }
 
-/* Social Media Links: Position under the 3rd column */
+/* Social Media Links: Centered */
 .footer-social {
     display: flex;
-    justify-content: flex-start; /* Align to the left under the 3rd column */
+    justify-content: center; /* Center social media icons */
     margin-top: 20px;
 }
 
 .footer-social a img {
-    width: 48px; /* Larger size */
-    height: 48px;
-    margin-right: 15px;
+    width: 30px; /* Adjusted size for icons */
+    height: 30px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icons */
 }
 
+/* Newsletter Container */
 .newsletter-container {
     display: flex;
     align-items: center;
-    background-color: white;
-    padding: 4px 15px; /* Reduced height */
-    border-radius: 50px; /* More rounded */
-    overflow: hidden;
+    background-color: white; /* Keeping it white for contrast */
+    border-radius: 50px; /* Rounded corners */
     max-width: 400px;
+    margin: 0 auto; /* Centered horizontally */
 }
 
+/* Newsletter Input */
 .newsletter-input {
     border: none;
     padding: 8px;
-    flex: 1;
+    flex: 1; /* Take available space */
     outline: none;
     border-radius: 50px 0 0 50px;
 }
 
+/* Newsletter Submit Button */
 .newsletter-submit {
     background: linear-gradient(90deg, #ae0100, #fe0000); /* Gradient */
     color: white;
     border: none;
-    padding: 6px 20px;
-    border-radius: 50px; /* Fully rounded */
+    padding: 0; /* Remove padding to fit input box */
+    height: 40px; /* Set a fixed height to match input box */
+    width: 100px; /* Set a width for the button */
+    border-radius: 0 50px 50px 0; /* Fully rounded */
     cursor: pointer;
-    margin-left: -250px; /* Shift more to the left */
-    position: relative;
-    right: -5px; /* Adjust to prevent cut-off */
 }
 
 .newsletter-submit:hover {
-    background: linear-gradient(90deg, #900100, #d00000); /* Darken gradient on hover */
+    background: linear-gradient(90deg, #900100, #d00000); /* Darker gradient on hover */
 }
 
+/* Legal Section */
 .footer-legal {
     text-align: center;
     margin-top: 40px;
@@ -923,6 +1092,29 @@ footer p {
     margin: 0;
     color: #aaa;
 }
-html {
-    scroll-behavior: smooth; /* for a smoother scroll when clicking on a link*/
-  }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Maintain row layout */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .footer-col {
+        flex: 1 1 45%; /* Each column takes 45% */
+    }
+
+    .newsletter-container {
+        justify-content: center; /* Center the newsletter input */
+    }
+
+    .footer-logo {
+        margin: 0 auto; /* Center the logo */
+    }
+
+    /* Responsive Adjustments for Submit Button Text Size */
+    .newsletter-submit {
+        font-size: 12px; /* Smaller font size for mobile view */
+        padding: 0 10px; /* Adjust padding to ensure it fits well */
+    }
+}
