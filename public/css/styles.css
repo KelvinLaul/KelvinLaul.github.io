@@ -540,7 +540,7 @@ html, body {
     overflow-x: auto; /* Enable horizontal scrolling */
     gap: 20px; /* Space between containers */
     padding: 20px 0; /* Space above and below testimonials */
-    margin: 20px auto; /* Center the testimonials and add margin */
+    margin: 20px auto; /* Center the testimonials */
     max-width: 90%; /* Allow full width for scrolling, adjust as needed */
     justify-content: center; /* Center align the testimonials horizontally */
 }
@@ -548,13 +548,14 @@ html, body {
 /* Styling for each testimonial container */
 .testimonial {
     position: relative; /* To position the image inside */
-    width: 200px; /* Width of the testimonial containers */
-    height: 220px; /* Increased height for a square shape with padding */
-    padding: 80px 10px 10px; /* Adjusted padding for better space above */
+    width: 220px; /* Width of the testimonial containers */
+    height: 240px; /* Height for better fit */
+    padding: 60px 10px 10px; /* Adjusted padding for better space above */
     background: linear-gradient(90deg, #9b0000, #fe0000); /* Gradient background */
     border-radius: 15px; /* Curved corners */
     color: #fff; /* White text color */
-    margin: 0; /* Ensure no extra margin is causing space */
+    text-align: center; /* Center align text */
+    margin: 0 10px; /* Margin for spacing */
 }
 
 /* Styling for the testimonial image */
@@ -562,9 +563,9 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Center the image horizontally */
-    top: -10px; /* Adjusted position above the container */
-    width: 60px; /* Diameter of the circular frame */
-    height: 60px; /* Diameter of the circular frame */
+    top: -8%; /* Adjusted position above the container */
+    width: 70px; /* Diameter of the circular frame */
+    height: 70px; /* Diameter of the circular frame */
     border-radius: 50%; /* Circular frame */
     overflow: hidden; /* Ensure circular shape */
     border: 4px solid #fff; /* Optional: add border to make the image stand out */
@@ -585,7 +586,8 @@ html, body {
 .testimonial-text {
     font-size: 14px; /* Adjusted text size for smaller fit */
     font-family: Roboto, sans-serif;
-    margin-bottom: 10px;
+    margin: 5px 0 10px; /* Adjusted margin for better spacing */
+    line-height: 1.4; /* Adjusted line height for readability */
 }
 
 .testimonial-author {
