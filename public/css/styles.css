@@ -563,7 +563,7 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Center the image horizontally */
-    top: -8%; /* Adjusted position above the container */
+    top: -10px; /* Adjusted position above the container */
     width: 70px; /* Diameter of the circular frame */
     height: 70px; /* Diameter of the circular frame */
     border-radius: 50%; /* Circular frame */
@@ -608,6 +608,30 @@ html, body {
 
 .testimonials-wrapper::-webkit-scrollbar-thumb:hover {
     background: #888; /* Darker color on hover */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    /* Make the testimonials bigger on mobile */
+    .testimonial {
+        width: 250px; /* Increased width for mobile view */
+        height: 280px; /* Increased height for better fit */
+        padding: 70px 10px 10px; /* Adjusted padding for more space above */
+    }
+
+    /* Ensure the testimonials wrapper allows horizontal scrolling */
+    .testimonials-wrapper {
+        overflow-x: auto; /* Ensure horizontal scrolling */
+    }
+
+    .testimonials-wrapper::-webkit-scrollbar {
+        height: 10px; /* Slightly larger scrollbar for mobile */
+    }
+
+    .testimonials-wrapper::-webkit-scrollbar-thumb {
+        background: #888; /* Darker color for better visibility */
+        border-radius: 10px; /* Rounded corners for the thumb */
+    }
 }
 
 
