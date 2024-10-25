@@ -719,61 +719,73 @@ html, body {
 
 
 
-/* RESULTS IMAGES */
 /* Ensure the body takes full height and remove default margins */
 html, body {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;  /* Prevent horizontal scroll on the body */
 }
 
 /* Result Images Wrapper */
 .image-container {
     display: flex;                     /* Use flexbox for horizontal alignment */
-    overflow-x: auto;                 /* Enable horizontal scrolling */
-    padding: 20px 0;                  /* Add vertical padding */
-    margin: 20px auto;                /* Center the container */
-    gap: 20px;                        /* Space between images */
-    justify-content: center;           /* Center items horizontally */
+    justify-content: center;           /* Center the images on desktop */
+    overflow-x: auto;                  /* Enable horizontal scrolling */
+    padding: 20px 0;                   /* Add vertical padding */
+    margin: 0 auto;                    /* Center the container */
+    gap: 20px;                         /* Space between images */
+    scroll-behavior: smooth;           /* Smooth scrolling effect */
+    white-space: nowrap;               /* Ensure no line wrapping */
 }
 
 /* Wrapper for individual images */
 .image-wrapper {
-    flex: 0 0 auto;                   /* Prevent items from shrinking and allow them to keep their width */
-    width: 300px;                     /* Set a fixed width for the images */
-    height: auto;                     /* Maintain the aspect ratio */
-    border-radius: 10px;              /* Optional: rounded corners */
-    overflow: hidden;                 /* Hide overflow if necessary */
+    flex: 0 0 auto;                    /* Prevent items from shrinking and allow them to keep their width */
+    width: 300px;                      /* Set a fixed width for the images */
+    height: auto;                      /* Maintain the aspect ratio */
+    border-radius: 10px;               /* Optional: rounded corners */
+    overflow: hidden;                  /* Hide overflow if necessary */
 }
 
 /* Style for images */
 .image-wrapper img {
-    width: 100%;                      /* Make image responsive */
-    height: auto;                     /* Maintain aspect ratio */
-    object-fit: cover;                /* Show the entire image within the container */
+    width: 100%;                       /* Make image responsive */
+    height: auto;                      /* Maintain aspect ratio */
+    object-fit: cover;                 /* Show the entire image within the container */
 }
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-    .image-wrapper {
-        width: 100vw;                 /* Full width of the viewport on mobile */
+    .image-container {
+        justify-content: flex-start;       /* Align images to the left on mobile */
+        gap: 10px;                         /* Reduce the space between images */
+        padding-left: 10px;                /* Add a little padding at the start for better look */
+        overflow-x: scroll;                /* Ensure scrolling is enabled */
+        display: block;                    /* Fix for scrolling behavior */
     }
 
-    /* Optional: Center the first image at the start */
+    .image-wrapper {
+        display: inline-block;             /* Ensure the images stay inline for horizontal scrolling */
+        width: 80vw;                       /* Make images take up 80% of the viewport width on mobile */
+    }
+
+    /* Add space before the first image to create some padding at the start */
     .image-container::before {
         content: '';
-        flex: 0 0 20px;                   /* Add space before the first image to push it inward */
+        display: inline-block;
+        width: 10px;                       /* Add small space before the first image */
     }
 
     /* Hide scrollbars for a cleaner look (optional) */
     .image-container::-webkit-scrollbar {
         display: none;
     }
+
     .image-container {
-        -ms-overflow-style: none;         /* IE and Edge */
-        scrollbar-width: none;            /* Firefox */
+        -ms-overflow-style: none;          /* IE and Edge */
+        scrollbar-width: none;             /* Firefox */
     }
 }
-
 
 
 
