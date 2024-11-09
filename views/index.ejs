@@ -10,17 +10,33 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="nav-container">
-        <a href="#" class="logo">Rose & Co</a>
-        <div class="nav-links">
-            <a href="#about" class="nav-item">About Us</a> <!-- Links to About Us section -->
-            <a href="#results" class="nav-item">Results</a> <!-- Links to Results section -->
-            <a href="#services" class="nav-item">Services</a> <!-- Links to Services section -->
-            <a href="#process" class="nav-item">Process</a> <!-- Links to Process section -->
-            <a href="#faqs" class="nav-item">FAQs</a> <!-- Links to FAQs section -->
-            <a href="#book" class="cta-button">Book a Call</a> <!-- Links to Book a Call section -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Rose & Co</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#process">Our Process</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faqs">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#book">Book a Call</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- HERO SECTION -->
     <div class="fixed-background"></div> <!-- Background Image Div -->
@@ -39,6 +55,7 @@
         <img src="/images/RoseLogo.png" alt="Rose Logo" class="hero-logo">
     </section>
 
+    
     <!-- Services Section -->
     <section class="container" > <!-- Add id for About Us section -->
         <div class="services" id="about">About Us</div> <!--id = "about allows for the navbar links to work" -->
@@ -122,17 +139,22 @@
         </div>
     </div>
 
-    <!-- FAQs Section -->
-    <section class="container" id="faqs"> <!-- Add id for FAQs section -->
-        <div class="faq-title">FAQs</div>
-        <p>Frequently asked questions about our services.</p>
-    </section>
+    <div class="container">
+        <div class="services">About Us</div>
+        <div class="what-we-offer">Our Team</div>
+        <div class="team-wrapper">
+            <div class="team-image">
+                <img src="\images\Team.png" alt="Team Image">
+            </div>
+            <div class="team-text">
+                <p class="team-title">The Rose & Co Team</p>
+                <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
 
-    <!-- Book a Call Section -->
-    <section class="container" id="book"> <!-- Add id for Book a Call section -->
-        <h2>Book a Call</h2>
-        <button>Schedule Now</button>
-    </section>
+
+      </div>
+    </div>
 
 </body>
 </html>
@@ -145,7 +167,7 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
   </head>
   <body>
     <div class="container">
@@ -157,7 +179,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="public/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" />
 </head>
